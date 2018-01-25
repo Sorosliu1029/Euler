@@ -5,6 +5,8 @@ generate jupyter notebook for Project Euler
 import json
 import sys
 from urllib.request import urlopen
+from bs4 import BeautifulSoup
+import html
 import re
 import os
 
@@ -79,9 +81,11 @@ def get_html_content(problem_id):
     assert problem_id > 0
     with urlopen("https://projecteuler.net/problem={}".format(problem_id)) as f:
         html_content = f.read().decode('utf-8')
-        problem_header_match = re.search(r"<h2>(.*?)</h2>", html_content)
-        problem_content_match = re.search(r'<div class=\"problem_content\" role=\"problem\">(.*?)</div>', html_content, flags=re.DOTALL)
-        return problem_header_match.group(1), problem_content_match.group(1).strip()
+    soup = BeautifulSoup(html_content, 'lxml')
+    problem_header = soup.find('h2').text
+    problem_content = html.unescape(str(soup.find('div', 'problem_content')))
+    problem_content = re.sub(r'href="(.*?)"', r'href="https://projecteuler.net/\1"', problem_content)
+    return problem_header, problem_content
 
 if __name__ == "__main__":
     argvs = sys.argv[1:]
