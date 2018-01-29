@@ -71,7 +71,7 @@ template = {
             "outputs": [],
             "source": [
                 "import sys, os; sys.path.append(os.path.abspath('..'))\n",
-                "from timer import Timer"
+                "from timer import timethis"
             ]
         },
         {
@@ -80,19 +80,9 @@ template = {
             "metadata": {},
             "outputs": [],
             "source": [
+                "@timethis\n",
                 "def solve():\n",
                 "    pass"
-            ]
-        },
-        {
-            "cell_type": "code",
-            "execution_count": None,
-            "metadata": {},
-            "outputs": [],
-            "source": [
-                "with Timer() as t:\n",
-                "    print(solve(args))\n",
-                "print('Run for {:.3f} seconds'.format(t.elapsed))"
             ]
         }
     ]
