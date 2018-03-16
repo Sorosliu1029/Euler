@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8" />
+<title>p13</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<link rel="stylesheet" href="../static/style.min.css" />
+<link rel="stylesheet" href="../static/highlight.min.css" />
+<link rel="stylesheet" href="../static/temporary.min.css" />
+<!-- Custom stylesheet, it must be in the same directory as the html file -->
+<link rel="stylesheet" href="../static/custom.css">
+
+<style type="text/css">
+/* Overrides of notebook CSS for static HTML export */
+body {
+  overflow: visible;
+  padding: 8px;
+}
+
+div#notebook {
+  overflow: visible;
+  border-top: none;
+}@media print {
+  div.cell {
+    display: block;
+    page-break-inside: avoid;
+  } 
+  div.output_wrapper { 
+    display: block;
+    page-break-inside: avoid; 
+  }
+  div.output { 
+    display: block;
+    page-break-inside: avoid; 
+  }
+}
+</style>
+
+<!-- Loading mathjax macro -->
+<!-- Load mathjax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+    <!-- MathJax configuration -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        // Center justify equations in code and markdown cells. Elsewhere
+        // we use CSS to left justify single line equations in code cells.
+        displayAlign: 'center',
+        "HTML-CSS": {
+            styles: {'.MathJax_Display': {"margin": 0}},
+            linebreaks: { automatic: true }
+        }
+    });
+    </script>
+    <!-- End of mathjax configuration --></head>
+<body>
+  <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Large-sum">Large sum<a class="anchor-link" href="#Large-sum">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Work out the first ten digits of the sum of the following one-hundred 50-digit numbers.</p>
+<p>37107287533902102798797998220837590246510135740250<br>
+46376937677490009712648124896970078050417018260538<br>
+74324986199524741059474233309513058123726617309629<br>
+91942213363574161572522430563301811072406154908250<br>
+23067588207539346171171980310421047513778063246676<br>
+89261670696623633820136378418383684178734361726757<br>
+28112879812849979408065481931592621691275889832738<br>
+44274228917432520321923589422876796487670272189318<br>
+47451445736001306439091167216856844588711603153276<br>
+70386486105843025439939619828917593665686757934951<br>
+62176457141856560629502157223196586755079324193331<br>
+64906352462741904929101432445813822663347944758178<br>
+92575867718337217661963751590579239728245598838407<br>
+58203565325359399008402633568948830189458628227828<br>
+80181199384826282014278194139940567587151170094390<br>
+35398664372827112653829987240784473053190104293586<br>
+86515506006295864861532075273371959191420517255829<br>
+71693888707715466499115593487603532921714970056938<br>
+54370070576826684624621495650076471787294438377604<br>
+53282654108756828443191190634694037855217779295145<br>
+36123272525000296071075082563815656710885258350721<br>
+45876576172410976447339110607218265236877223636045<br>
+17423706905851860660448207621209813287860733969412<br>
+81142660418086830619328460811191061556940512689692<br>
+51934325451728388641918047049293215058642563049483<br>
+62467221648435076201727918039944693004732956340691<br>
+15732444386908125794514089057706229429197107928209<br>
+55037687525678773091862540744969844508330393682126<br>
+18336384825330154686196124348767681297534375946515<br>
+80386287592878490201521685554828717201219257766954<br>
+78182833757993103614740356856449095527097864797581<br>
+16726320100436897842553539920931837441497806860984<br>
+48403098129077791799088218795327364475675590848030<br>
+87086987551392711854517078544161852424320693150332<br>
+59959406895756536782107074926966537676326235447210<br>
+69793950679652694742597709739166693763042633987085<br>
+41052684708299085211399427365734116182760315001271<br>
+65378607361501080857009149939512557028198746004375<br>
+35829035317434717326932123578154982629742552737307<br>
+94953759765105305946966067683156574377167401875275<br>
+88902802571733229619176668713819931811048770190271<br>
+25267680276078003013678680992525463401061632866526<br>
+36270218540497705585629946580636237993140746255962<br>
+24074486908231174977792365466257246923322810917141<br>
+91430288197103288597806669760892938638285025333403<br>
+34413065578016127815921815005561868836468420090470<br>
+23053081172816430487623791969842487255036638784583<br>
+11487696932154902810424020138335124462181441773470<br>
+63783299490636259666498587618221225225512486764533<br>
+67720186971698544312419572409913959008952310058822<br>
+95548255300263520781532296796249481641953868218774<br>
+76085327132285723110424803456124867697064507995236<br>
+37774242535411291684276865538926205024910326572967<br>
+23701913275725675285653248258265463092207058596522<br>
+29798860272258331913126375147341994889534765745501<br>
+18495701454879288984856827726077713721403798879715<br>
+38298203783031473527721580348144513491373226651381<br>
+34829543829199918180278916522431027392251122869539<br>
+40957953066405232632538044100059654939159879593635<br>
+29746152185502371307642255121183693803580388584903<br>
+41698116222072977186158236678424689157993532961922<br>
+62467957194401269043877107275048102390895523597457<br>
+23189706772547915061505504953922979530901129967519<br>
+86188088225875314529584099251203829009407770775672<br>
+11306739708304724483816533873502340845647058077308<br>
+82959174767140363198008187129011875491310547126581<br>
+97623331044818386269515456334926366572897563400500<br>
+42846280183517070527831839425882145521227251250327<br>
+55121603546981200581762165212827652751691296897789<br>
+32238195734329339946437501907836945765883352399886<br>
+75506164965184775180738168837861091527357929701337<br>
+62177842752192623401942399639168044983993173312731<br>
+32924185707147349566916674687634660915035914677504<br>
+99518671430235219628894890102423325116913619626622<br>
+73267460800591547471830798392868535206946944540724<br>
+76841822524674417161514036427982273348055556214818<br>
+97142617910342598647204516893989422179826088076852<br>
+87783646182799346313767754307809363333018982642090<br>
+10848802521674670883215120185883543223812876952786<br>
+71329612474782464538636993009049310363619763878039<br>
+62184073572399794223406235393808339651327408011116<br>
+66627891981488087797941876876144230030984490851411<br>
+60661826293682836764744779239180335110989069790714<br>
+85786944089552990653640447425576083659976645795096<br>
+66024396409905389607120198219976047599490197230297<br>
+64913982680032973156037120041377903785566085089252<br>
+16730939319872750275468906903707539413042652315011<br>
+94809377245048795150954100921645863754710598436791<br>
+78639167021187492431995700641917969777599028300699<br>
+15368713711936614952811305876380278410754449733078<br>
+40789923115535562561142322423255033685442488917353<br>
+44889911501440648020369068063960672322193204149535<br>
+41503128880339536053299340368006977710650566631954<br>
+81234880673210146739058568557934581403627822703280<br>
+82616570773948327592232845941706525094512325230608<br>
+22918802058777319719839450180888072429661980811197<br>
+77158542502016545090413245809786882778948721859617<br>
+72107838435069186155435662884062257473692284509516<br>
+20849603980134001723930671666823555245252804609722<br>
+53503534226472524250874054075591789781264330331690</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Idea">Idea<a class="anchor-link" href="#Idea">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>An addition problem from primary school.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;37107287533902102798797998220837590246510135740250</span>
+<span class="s2">46376937677490009712648124896970078050417018260538</span>
+<span class="s2">74324986199524741059474233309513058123726617309629</span>
+<span class="s2">91942213363574161572522430563301811072406154908250</span>
+<span class="s2">23067588207539346171171980310421047513778063246676</span>
+<span class="s2">89261670696623633820136378418383684178734361726757</span>
+<span class="s2">28112879812849979408065481931592621691275889832738</span>
+<span class="s2">44274228917432520321923589422876796487670272189318</span>
+<span class="s2">47451445736001306439091167216856844588711603153276</span>
+<span class="s2">70386486105843025439939619828917593665686757934951</span>
+<span class="s2">62176457141856560629502157223196586755079324193331</span>
+<span class="s2">64906352462741904929101432445813822663347944758178</span>
+<span class="s2">92575867718337217661963751590579239728245598838407</span>
+<span class="s2">58203565325359399008402633568948830189458628227828</span>
+<span class="s2">80181199384826282014278194139940567587151170094390</span>
+<span class="s2">35398664372827112653829987240784473053190104293586</span>
+<span class="s2">86515506006295864861532075273371959191420517255829</span>
+<span class="s2">71693888707715466499115593487603532921714970056938</span>
+<span class="s2">54370070576826684624621495650076471787294438377604</span>
+<span class="s2">53282654108756828443191190634694037855217779295145</span>
+<span class="s2">36123272525000296071075082563815656710885258350721</span>
+<span class="s2">45876576172410976447339110607218265236877223636045</span>
+<span class="s2">17423706905851860660448207621209813287860733969412</span>
+<span class="s2">81142660418086830619328460811191061556940512689692</span>
+<span class="s2">51934325451728388641918047049293215058642563049483</span>
+<span class="s2">62467221648435076201727918039944693004732956340691</span>
+<span class="s2">15732444386908125794514089057706229429197107928209</span>
+<span class="s2">55037687525678773091862540744969844508330393682126</span>
+<span class="s2">18336384825330154686196124348767681297534375946515</span>
+<span class="s2">80386287592878490201521685554828717201219257766954</span>
+<span class="s2">78182833757993103614740356856449095527097864797581</span>
+<span class="s2">16726320100436897842553539920931837441497806860984</span>
+<span class="s2">48403098129077791799088218795327364475675590848030</span>
+<span class="s2">87086987551392711854517078544161852424320693150332</span>
+<span class="s2">59959406895756536782107074926966537676326235447210</span>
+<span class="s2">69793950679652694742597709739166693763042633987085</span>
+<span class="s2">41052684708299085211399427365734116182760315001271</span>
+<span class="s2">65378607361501080857009149939512557028198746004375</span>
+<span class="s2">35829035317434717326932123578154982629742552737307</span>
+<span class="s2">94953759765105305946966067683156574377167401875275</span>
+<span class="s2">88902802571733229619176668713819931811048770190271</span>
+<span class="s2">25267680276078003013678680992525463401061632866526</span>
+<span class="s2">36270218540497705585629946580636237993140746255962</span>
+<span class="s2">24074486908231174977792365466257246923322810917141</span>
+<span class="s2">91430288197103288597806669760892938638285025333403</span>
+<span class="s2">34413065578016127815921815005561868836468420090470</span>
+<span class="s2">23053081172816430487623791969842487255036638784583</span>
+<span class="s2">11487696932154902810424020138335124462181441773470</span>
+<span class="s2">63783299490636259666498587618221225225512486764533</span>
+<span class="s2">67720186971698544312419572409913959008952310058822</span>
+<span class="s2">95548255300263520781532296796249481641953868218774</span>
+<span class="s2">76085327132285723110424803456124867697064507995236</span>
+<span class="s2">37774242535411291684276865538926205024910326572967</span>
+<span class="s2">23701913275725675285653248258265463092207058596522</span>
+<span class="s2">29798860272258331913126375147341994889534765745501</span>
+<span class="s2">18495701454879288984856827726077713721403798879715</span>
+<span class="s2">38298203783031473527721580348144513491373226651381</span>
+<span class="s2">34829543829199918180278916522431027392251122869539</span>
+<span class="s2">40957953066405232632538044100059654939159879593635</span>
+<span class="s2">29746152185502371307642255121183693803580388584903</span>
+<span class="s2">41698116222072977186158236678424689157993532961922</span>
+<span class="s2">62467957194401269043877107275048102390895523597457</span>
+<span class="s2">23189706772547915061505504953922979530901129967519</span>
+<span class="s2">86188088225875314529584099251203829009407770775672</span>
+<span class="s2">11306739708304724483816533873502340845647058077308</span>
+<span class="s2">82959174767140363198008187129011875491310547126581</span>
+<span class="s2">97623331044818386269515456334926366572897563400500</span>
+<span class="s2">42846280183517070527831839425882145521227251250327</span>
+<span class="s2">55121603546981200581762165212827652751691296897789</span>
+<span class="s2">32238195734329339946437501907836945765883352399886</span>
+<span class="s2">75506164965184775180738168837861091527357929701337</span>
+<span class="s2">62177842752192623401942399639168044983993173312731</span>
+<span class="s2">32924185707147349566916674687634660915035914677504</span>
+<span class="s2">99518671430235219628894890102423325116913619626622</span>
+<span class="s2">73267460800591547471830798392868535206946944540724</span>
+<span class="s2">76841822524674417161514036427982273348055556214818</span>
+<span class="s2">97142617910342598647204516893989422179826088076852</span>
+<span class="s2">87783646182799346313767754307809363333018982642090</span>
+<span class="s2">10848802521674670883215120185883543223812876952786</span>
+<span class="s2">71329612474782464538636993009049310363619763878039</span>
+<span class="s2">62184073572399794223406235393808339651327408011116</span>
+<span class="s2">66627891981488087797941876876144230030984490851411</span>
+<span class="s2">60661826293682836764744779239180335110989069790714</span>
+<span class="s2">85786944089552990653640447425576083659976645795096</span>
+<span class="s2">66024396409905389607120198219976047599490197230297</span>
+<span class="s2">64913982680032973156037120041377903785566085089252</span>
+<span class="s2">16730939319872750275468906903707539413042652315011</span>
+<span class="s2">94809377245048795150954100921645863754710598436791</span>
+<span class="s2">78639167021187492431995700641917969777599028300699</span>
+<span class="s2">15368713711936614952811305876380278410754449733078</span>
+<span class="s2">40789923115535562561142322423255033685442488917353</span>
+<span class="s2">44889911501440648020369068063960672322193204149535</span>
+<span class="s2">41503128880339536053299340368006977710650566631954</span>
+<span class="s2">81234880673210146739058568557934581403627822703280</span>
+<span class="s2">82616570773948327592232845941706525094512325230608</span>
+<span class="s2">22918802058777319719839450180888072429661980811197</span>
+<span class="s2">77158542502016545090413245809786882778948721859617</span>
+<span class="s2">72107838435069186155435662884062257473692284509516</span>
+<span class="s2">20849603980134001723930671666823555245252804609722</span>
+<span class="s2">53503534226472524250874054075591789781264330331690&quot;&quot;&quot;</span>
+<span class="n">numbers</span> <span class="o">=</span> <span class="n">numbers</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">compute_digit_and_carry</span><span class="p">(</span><span class="n">digits</span><span class="p">):</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">digits</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">s</span> <span class="o">%</span> <span class="mi">10</span><span class="p">,</span> <span class="n">s</span> <span class="o">//</span> <span class="mi">10</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">compute_digit_and_carry</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[3]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(5, 1)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_numbers_digit</span><span class="p">(</span><span class="n">numbers</span><span class="p">,</span> <span class="n">ith</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="n">ith</span><span class="p">])</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">get_numbers_digit</span><span class="p">(</span><span class="n">numbers</span><span class="p">,</span> <span class="mi">0</span><span class="p">)[:</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[5]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[3, 4, 7, 9, 2]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">solve</span><span class="p">(</span><span class="n">numbers</span><span class="p">,</span> <span class="n">first_n_digits</span><span class="p">):</span>
+    <span class="n">digit_number</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">carry</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">digits</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">digit_number</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">d</span><span class="p">,</span> <span class="n">carry</span> <span class="o">=</span> <span class="n">compute_digit_and_carry</span><span class="p">(</span><span class="n">get_numbers_digit</span><span class="p">(</span><span class="n">numbers</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span> <span class="o">+</span> <span class="p">[</span><span class="n">carry</span><span class="p">])</span>
+        <span class="n">digits</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
+    <span class="n">digits</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">carry</span><span class="p">))</span> <span class="o">+</span> <span class="n">digits</span>
+    <span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">digits</span><span class="p">[:</span><span class="n">first_n_digits</span><span class="p">]))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">solve</span><span class="p">(</span><span class="n">numbers</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[7]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;5537376230&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    </div>
+  </div>
+</body>
+
+ 
+
+
+</html>
