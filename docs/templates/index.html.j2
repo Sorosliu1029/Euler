@@ -93,13 +93,14 @@
                         <th>Difficulty Rating</th>
                         <th>Problems Available</th>
                         <th>Problems Solved</th>
+                        <th>Progress</th>
                     </tr>
                     {%- for r in range(20, 0, -1) -%}
                     <tr>
                         <td>{{ r * 5 }}%</td>
                         <td>{{ total_difficulty_counter[r*5] }}</td>
                         <td>{{ solved_difficulty_counter[r*5] if solved_difficulty_counter[r*5] else '' }}</td>
-                        <td style="border:none;background:none;">
+                        <td style="background:none;">
                             {%- if solved_difficulty_counter[r*5] -%}
                             <div class="difficulty_progress_bar_box info">
                                 <div class="difficulty_progress_bar" style="width:{{ '{}'.format(solved_difficulty_counter[r*5] * 100 // total_difficulty_counter[r*5]) }}%;background:url(https://projecteuler.net/images/difficulty_gradient_bar.png) 0 0 no-repeat;"></div>
@@ -113,6 +114,7 @@
                         <td>Mean Difficulty</td>
                         <td>{{ total_mean_difficulty }}%</td>
                         <td>{{ solved_mean_difficulty }}%</td>
+                        <td></td>
                     </tr>
                 </table>
                 <div>Highest difficulty solved = {{ solved_max_difficulty }}%
