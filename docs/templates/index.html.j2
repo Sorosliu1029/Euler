@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>My Euler Progress</title>
+    <link rel="stylesheet" type="text/css" href="static/style_default.css"/>
+</head>
+
+<body>
+    <div id="progress_page">
+        <div id="main_section">
+            <div id="header_section">
+                <div id="level_image_box">
+                    <img src="https://projecteuler.net/images/levels/level_{{ highest_level }}.png" alt="Level {{ highest_level }}" />
+                </div>
+                <h2 id="profile_name_text">SorosLiu</h2>
+                <h3 id="level_text">Level {{ highest_level }}</h3>
+            </div>
+            <div id="progress_bar_section">
+                <h3>Solved {{ solved_count }} out of {{ total_count }} problems</h3>
+                <div id="progress_bar_box" class="info">
+                    <div id="progress_bar" style="width:{{ progress_percentage }}%;background:url(https://projecteuler.net/images/gradient_bar.png) 0 0 no-repeat;"></div>
+                    <span>Completed {{ progress_percentage }}% of the problems</span>
+                </div>
+            </div>
+            <div id="levels_completed_section">
+                <h3>Levels Completed</h3>
+                <table id="levels_completed_table" class="grid">
+                {%- for i in range(3) -%}
+                    <tr>
+                    {%- for j in range(8) -%}
+                        <td>
+                            <div style="text-align:center;">
+                                <div class="info">
+                                    <a href="https://projecteuler.net/level={{ i * 8 + j + 1 }}">
+                                        {%- if solved_count >= (i*8+j+1)*25 -%}
+                                        <img src="https://projecteuler.net/images/levels/level_{{ i * 8 + j + 1 }}.png" title="" />
+                                        {%- else -%}
+                                        <div>Solve
+                                            <div style="font-size:200%;">{{ (i*8+j+1)*25 }}</div>problems</div>
+                                        {%- endif -%}
+                                        <span>
+                                            <div class="heading">Level {{ i * 8 +j + 1 }}</div>Solved {{ (i*8+j+1)*25 }} problems</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </td>
+                    {%- endfor -%}
+                    </tr>
+                {%- endfor -%}
+                </table>
+            </div>
+            <div id="problems_solved_section">
+                <h3>Problems Solved</h3>
+                {%- for t in range(total_count // 100 + 1) -%}
+                <table class="grid problems_solved_table">
+                    {%- for r in range(5) -%}
+                    <tr>
+                        {%- for c in range(20) if t*100+r*20+c+1 <= total_count -%}
+                        <td class="{%- if (t*100+r*20+c+1) in solved -%}
+                                    problem_solved
+                                    {%- else -%}
+                                    problem_unsolved
+                                    {%- endif -%}">
+                            <a href="{%- if (t*100+r*20+c+1) in solved -%}
+                                    {{ t*100+1 }}-{{ (t+1)*100 }}/p{{ t*100+r*20+c+1 }}.html
+                                    {%- else -%}
+                                    https://projecteuler.net/problem={{ t*100+r*20+c+1 }}
+                                    {%- endif -%}" style="color:inherit;" target="_blank">
+                                <div style="" class="info">{{ t*100+r*20+c+1 }}
+                                    <span>
+                                        <div class="heading">Problem {{ t*100+r*20+c+1 }} (solved by {{ problems[t*100+r*20+c]['solved_by'] }} members)</div>
+                                        <div style="font-size:85%;font-weight:bold;color:#333;">Difficulty rating: {{ problems[t*100+r*20+c]['difficulty'] }}%</div>
+                                        {%- if (t*100+r*20+c+1) in solved -%}
+                                        <div style="font-size:80%;color:#666;">Completed on {{ problems[t*100+r*20+c]['completed_on'] }}</div>
+                                        {%- endif -%}
+                                        &quot;{{ problems[t*100+r*20+c]['title'] }}&quot;
+                                    </span>
+                                </div>
+                            </a>
+                        </td>
+                        {%- endfor -%}
+                    </tr>
+                    {%- endfor -%}
+                </table>
+                {%- endfor -%}
+            </div>
+            <div id="problems_solving_awards_section">
+                <h3>Problem Difficulty Ratings</h3>
+                <table class="grid" id="difficulty_progress_table">
+                    <tr>
+                        <th>Difficulty Rating</th>
+                        <th>Problems Available</th>
+                        <th>Problems Solved</th>
+                    </tr>
+                    {%- for r in range(20, 0, -1) -%}
+                    <tr>
+                        <td>{{ r * 5 }}%</td>
+                        <td>{{ total_difficulty_counter[r*5] }}</td>
+                        <td>{{ solved_difficulty_counter[r*5] if solved_difficulty_counter[r*5] else '' }}</td>
+                        <td style="border:none;background:none;">
+                            {%- if solved_difficulty_counter[r*5] -%}
+                            <div class="difficulty_progress_bar_box info">
+                                <div class="difficulty_progress_bar" style="width:{{ '{}'.format(solved_difficulty_counter[r*5] * 100 // total_difficulty_counter[r*5]) }}%;background:url(https://projecteuler.net/images/difficulty_gradient_bar.png) 0 0 no-repeat;"></div>
+                                <span>Completed {{ '{}'.format(solved_difficulty_counter[r*5] * 100 // total_difficulty_counter[r*5]) }}% of problems with difficulty rating {{ r * 5 }}%</span>
+                            </div>
+                            {%- endif -%}
+                        </td>
+                    </tr>
+                    {%- endfor -%}
+                    <tr style="font-weight:bold;">
+                        <td>Mean Difficulty</td>
+                        <td>{{ total_mean_difficulty }}%</td>
+                        <td>{{ solved_mean_difficulty }}%</td>
+                    </tr>
+                </table>
+                <div>Highest difficulty solved = {{ solved_max_difficulty }}%
+                </div>
+                <br />
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
