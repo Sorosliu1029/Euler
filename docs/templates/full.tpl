@@ -17,9 +17,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
-<link rel="stylesheet" href="static/style.min.css" />
-<link rel="stylesheet" href="static/highlight.min.css" />
-<link rel="stylesheet" href="static/temporary.min.css" />
+<link rel="stylesheet" href="../static/style.min.css" />
+<link rel="stylesheet" href="../static/highlight.min.css" />
+<link rel="stylesheet" href="../static/temporary.min.css" />
+<!-- Custom stylesheet, it must be in the same directory as the html file -->
+<link rel="stylesheet" href="../static/custom.css">
 
 <style type="text/css">
 /* Overrides of notebook CSS for static HTML export */
@@ -54,9 +56,6 @@ div#notebook-container{
   }
 }
 </style>
-
-<!-- Custom stylesheet, it must be in the same directory as the html file -->
-<link rel="stylesheet" href="static/custom.css">
 
 <!-- Loading mathjax macro -->
 {{ mathjax() }}
