@@ -50,7 +50,7 @@ def convert(is_all):
                     'source_ipynb_path': source_ipynb_path
                 }
 
-    latest_solved_problems = sorted(solved_problems.keys(), key=lambda k: solved_problems[k]['modified_on'])
+    latest_solved_problems = sorted(solved_problems.keys(), key=lambda k: solved_problems[k]['modified_on'], reverse=True)
     converter = Converter()
     for problem_id in latest_solved_problems[:3]:
         converter.write(solved_problems[problem_id]['source_ipynb_path'])
