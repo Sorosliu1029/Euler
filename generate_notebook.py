@@ -9,6 +9,7 @@ from bs4 import BeautifulSoup
 import html
 import re
 import os
+from convert2html import convert_and_render
 
 template = {
     "nbformat": 4,
@@ -98,7 +99,7 @@ def get_html_content(problem_id):
     problem_content = re.sub(r'href="(.*?)"', r'href="https://projecteuler.net/\1"', problem_content)
     return problem_header, problem_content
 
-if __name__ == "__main__":
+def main():
     argvs = sys.argv[1:]
     if not argvs:
         print("Please provide problem id.")
@@ -119,3 +120,10 @@ if __name__ == "__main__":
 
     with open(os.path.join(directory, 'p{}.ipynb'.format(problem_id)), 'w+') as f:
         json.dump(template, f, indent=2)
+    print('generate done.')
+
+    convert_and_render()
+
+
+if __name__ == "__main__":
+    main()
