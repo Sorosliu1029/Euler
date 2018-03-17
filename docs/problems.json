@@ -3,350 +3,350 @@
     "id": 1,
     "solved_by": 736441,
     "difficulty": 5,
-    "completed_on": "Thu, 15 Mar 2018, 11:54",
+    "completed_on": "Tue, 12 Dec 2017, 20:03",
     "title": "Multiples of 3 and 5"
   },
   {
     "id": 2,
     "solved_by": 592496,
     "difficulty": 5,
-    "completed_on": "Wed, 13 Dec 2017, 09:49",
+    "completed_on": "Tue, 12 Dec 2017, 22:35",
     "title": "Even Fibonacci numbers"
   },
   {
     "id": 3,
     "solved_by": 424474,
     "difficulty": 5,
-    "completed_on": "Wed, 13 Dec 2017, 09:52",
+    "completed_on": "Thu, 14 Dec 2017, 23:12",
     "title": "Largest prime factor"
   },
   {
     "id": 4,
     "solved_by": 378197,
     "difficulty": 5,
-    "completed_on": "Thu, 14 Dec 2017, 13:10",
+    "completed_on": "Wed, 13 Dec 2017, 19:24",
     "title": "Largest palindrome product"
   },
   {
     "id": 5,
     "solved_by": 386833,
     "difficulty": 5,
-    "completed_on": "Thu, 14 Dec 2017, 14:25",
+    "completed_on": "Thu, 14 Dec 2017, 23:04",
     "title": "Smallest multiple"
   },
   {
     "id": 6,
     "solved_by": 389095,
     "difficulty": 5,
-    "completed_on": "Fri, 15 Dec 2017, 15:46",
+    "completed_on": "Fri, 15 Dec 2017, 00:19",
     "title": "Sum square difference"
   },
   {
     "id": 7,
     "solved_by": 333065,
     "difficulty": 5,
-    "completed_on": "Fri, 15 Dec 2017, 16:59",
+    "completed_on": "Sat, 16 Dec 2017, 18:40",
     "title": "10001st prime"
   },
   {
     "id": 8,
     "solved_by": 281746,
     "difficulty": 5,
-    "completed_on": "Mon, 18 Dec 2017, 13:19",
+    "completed_on": "Fri, 15 Dec 2017, 21:51",
     "title": "Largest product in a series"
   },
   {
     "id": 9,
     "solved_by": 284399,
     "difficulty": 5,
-    "completed_on": "Mon, 18 Dec 2017, 13:19",
+    "completed_on": "Sat, 16 Dec 2017, 09:45",
     "title": "Special Pythagorean triplet"
   },
   {
     "id": 10,
     "solved_by": 260928,
     "difficulty": 5,
-    "completed_on": "Mon, 18 Dec 2017, 13:19",
+    "completed_on": "Sat, 16 Dec 2017, 18:40",
     "title": "Summation of primes"
   },
   {
     "id": 11,
     "solved_by": 189443,
     "difficulty": 5,
-    "completed_on": "Mon, 18 Dec 2017, 14:49",
+    "completed_on": "Mon, 18 Dec 2017, 21:20",
     "title": "Largest product in a grid"
   },
   {
     "id": 12,
     "solved_by": 176789,
     "difficulty": 5,
-    "completed_on": "Mon, 18 Dec 2017, 17:43",
+    "completed_on": "Mon, 18 Dec 2017, 21:20",
     "title": "Highly divisible triangular number"
   },
   {
     "id": 13,
     "solved_by": 182551,
     "difficulty": 5,
-    "completed_on": "Tue, 19 Dec 2017, 13:59",
+    "completed_on": "Sun, 24 Dec 2017, 14:50",
     "title": "Large sum"
   },
   {
     "id": 14,
     "solved_by": 181985,
     "difficulty": 5,
-    "completed_on": "Tue, 26 Dec 2017, 10:56",
+    "completed_on": "Sun, 24 Dec 2017, 15:32",
     "title": "Longest Collatz sequence"
   },
   {
     "id": 15,
     "solved_by": 150501,
     "difficulty": 5,
-    "completed_on": "Tue, 26 Dec 2017, 10:56",
+    "completed_on": "Sun, 24 Dec 2017, 22:51",
     "title": "Lattice paths"
   },
   {
     "id": 16,
     "solved_by": 184157,
     "difficulty": 5,
-    "completed_on": "Tue, 26 Dec 2017, 10:56",
+    "completed_on": "Sun, 24 Dec 2017, 23:28",
     "title": "Power digit sum"
   },
   {
     "id": 17,
     "solved_by": 122620,
     "difficulty": 5,
-    "completed_on": "Tue, 26 Dec 2017, 10:56",
+    "completed_on": "Mon, 25 Dec 2017, 00:18",
     "title": "Number letter counts"
   },
   {
     "id": 18,
     "solved_by": 117849,
     "difficulty": 5,
-    "completed_on": "Tue, 30 Jan 2018, 13:16",
+    "completed_on": "Mon, 25 Dec 2017, 14:29",
     "title": "Maximum path sum I"
   },
   {
     "id": 19,
     "solved_by": 109541,
     "difficulty": 5,
-    "completed_on": "Tue, 26 Dec 2017, 10:56",
+    "completed_on": "Mon, 25 Dec 2017, 18:24",
     "title": "Counting Sundays"
   },
   {
     "id": 20,
     "solved_by": 161649,
     "difficulty": 5,
-    "completed_on": "Tue, 26 Dec 2017, 10:56",
+    "completed_on": "Tue, 26 Dec 2017, 00:07",
     "title": "Factorial digit sum"
   },
   {
     "id": 21,
     "solved_by": 118064,
     "difficulty": 5,
-    "completed_on": "Tue, 26 Dec 2017, 13:09",
+    "completed_on": "Tue, 26 Dec 2017, 18:28",
     "title": "Amicable numbers"
   },
   {
     "id": 22,
     "solved_by": 109103,
     "difficulty": 5,
-    "completed_on": "Tue, 26 Dec 2017, 13:37",
+    "completed_on": "Tue, 26 Dec 2017, 18:28",
     "title": "Names scores"
   },
   {
     "id": 23,
     "solved_by": 83837,
     "difficulty": 5,
-    "completed_on": "Tue, 26 Dec 2017, 15:00",
+    "completed_on": "Tue, 26 Dec 2017, 18:28",
     "title": "Non-abundant sums"
   },
   {
     "id": 24,
     "solved_by": 93243,
     "difficulty": 5,
-    "completed_on": "Tue, 26 Dec 2017, 17:32",
+    "completed_on": "Tue, 26 Dec 2017, 18:28",
     "title": "Lexicographic permutations"
   },
   {
     "id": 25,
     "solved_by": 126177,
     "difficulty": 5,
-    "completed_on": "Wed, 27 Dec 2017, 13:22",
+    "completed_on": "Fri, 29 Dec 2017, 19:21",
     "title": "1000-digit Fibonacci number"
   },
   {
     "id": 26,
     "solved_by": 67639,
     "difficulty": 5,
-    "completed_on": "Wed, 27 Dec 2017, 13:54",
+    "completed_on": "Fri, 29 Dec 2017, 19:21",
     "title": "Reciprocal cycles"
   },
   {
     "id": 27,
     "solved_by": 70760,
     "difficulty": 5,
-    "completed_on": "Wed, 27 Dec 2017, 15:02",
+    "completed_on": "Fri, 29 Dec 2017, 19:21",
     "title": "Quadratic primes"
   },
   {
     "id": 28,
     "solved_by": 89133,
     "difficulty": 5,
-    "completed_on": "Wed, 27 Dec 2017, 17:32",
+    "completed_on": "Fri, 29 Dec 2017, 19:21",
     "title": "Number spiral diagonals"
   },
   {
     "id": 29,
     "solved_by": 84985,
     "difficulty": 5,
-    "completed_on": "Fri, 29 Dec 2017, 16:30",
+    "completed_on": "Fri, 29 Dec 2017, 19:21",
     "title": "Distinct powers"
   },
   {
     "id": 30,
     "solved_by": 89066,
     "difficulty": 5,
-    "completed_on": "Fri, 29 Dec 2017, 17:44",
+    "completed_on": "Fri, 29 Dec 2017, 19:21",
     "title": "Digit fifth powers"
   },
   {
     "id": 31,
     "solved_by": 68042,
     "difficulty": 5,
-    "completed_on": "Tue, 02 Jan 2018, 13:43",
+    "completed_on": "Tue, 02 Jan 2018, 20:32",
     "title": "Coin sums"
   },
   {
     "id": 32,
     "solved_by": 57463,
     "difficulty": 5,
-    "completed_on": "Tue, 02 Jan 2018, 14:40",
+    "completed_on": "Tue, 02 Jan 2018, 20:32",
     "title": "Pandigital products"
   },
   {
     "id": 33,
     "solved_by": 58119,
     "difficulty": 5,
-    "completed_on": "Tue, 02 Jan 2018, 16:35",
+    "completed_on": "Tue, 02 Jan 2018, 20:32",
     "title": "Digit cancelling fractions"
   },
   {
     "id": 34,
     "solved_by": 76576,
     "difficulty": 5,
-    "completed_on": "Wed, 03 Jan 2018, 13:18",
+    "completed_on": "Wed, 03 Jan 2018, 20:19",
     "title": "Digit factorials"
   },
   {
     "id": 35,
     "solved_by": 69140,
     "difficulty": 5,
-    "completed_on": "Thu, 04 Jan 2018, 09:58",
+    "completed_on": "Fri, 05 Jan 2018, 18:35",
     "title": "Circular primes"
   },
   {
     "id": 36,
     "solved_by": 72786,
     "difficulty": 5,
-    "completed_on": "Thu, 04 Jan 2018, 11:20",
+    "completed_on": "Fri, 05 Jan 2018, 18:35",
     "title": "Double-base palindromes"
   },
   {
     "id": 37,
     "solved_by": 59712,
     "difficulty": 5,
-    "completed_on": "Thu, 04 Jan 2018, 13:53",
+    "completed_on": "Fri, 05 Jan 2018, 18:35",
     "title": "Truncatable primes"
   },
   {
     "id": 38,
     "solved_by": 50884,
     "difficulty": 5,
-    "completed_on": "Thu, 04 Jan 2018, 16:43",
+    "completed_on": "Fri, 05 Jan 2018, 18:35",
     "title": "Pandigital multiples"
   },
   {
     "id": 39,
     "solved_by": 59140,
     "difficulty": 5,
-    "completed_on": "Fri, 05 Jan 2018, 16:22",
+    "completed_on": "Fri, 05 Jan 2018, 18:35",
     "title": "Integer right triangles"
   },
   {
     "id": 40,
     "solved_by": 65250,
     "difficulty": 5,
-    "completed_on": "Fri, 05 Jan 2018, 17:24",
+    "completed_on": "Fri, 05 Jan 2018, 18:35",
     "title": "Champernowne's constant"
   },
   {
     "id": 41,
     "solved_by": 55056,
     "difficulty": 5,
-    "completed_on": "Mon, 08 Jan 2018, 10:25",
+    "completed_on": "Sat, 06 Jan 2018, 13:39",
     "title": "Pandigital prime"
   },
   {
     "id": 42,
     "solved_by": 60936,
     "difficulty": 5,
-    "completed_on": "Mon, 08 Jan 2018, 10:25",
+    "completed_on": "Sat, 06 Jan 2018, 13:58",
     "title": "Coded triangle numbers"
   },
   {
     "id": 43,
     "solved_by": 47982,
     "difficulty": 5,
-    "completed_on": "Mon, 08 Jan 2018, 10:25",
+    "completed_on": "Sat, 06 Jan 2018, 15:15",
     "title": "Sub-string divisibility"
   },
   {
     "id": 44,
     "solved_by": 46611,
     "difficulty": 5,
-    "completed_on": "Mon, 08 Jan 2018, 10:25",
+    "completed_on": "Sun, 07 Jan 2018, 11:21",
     "title": "Pentagon numbers"
   },
   {
     "id": 45,
     "solved_by": 57932,
     "difficulty": 5,
-    "completed_on": "Mon, 08 Jan 2018, 10:25",
+    "completed_on": "Sun, 07 Jan 2018, 13:33",
     "title": "Triangular, pentagonal, and hexagonal"
   },
   {
     "id": 46,
     "solved_by": 49344,
     "difficulty": 5,
-    "completed_on": "Mon, 08 Jan 2018, 10:25",
+    "completed_on": "Sun, 07 Jan 2018, 13:57",
     "title": "Goldbach's other conjecture"
   },
   {
     "id": 47,
     "solved_by": 46631,
     "difficulty": 5,
-    "completed_on": "Mon, 08 Jan 2018, 10:54",
+    "completed_on": "Tue, 09 Jan 2018, 19:07",
     "title": "Distinct primes factors"
   },
   {
     "id": 48,
     "solved_by": 92956,
     "difficulty": 5,
-    "completed_on": "Mon, 08 Jan 2018, 11:04",
+    "completed_on": "Tue, 09 Jan 2018, 19:07",
     "title": "Self powers"
   },
   {
     "id": 49,
     "solved_by": 46611,
     "difficulty": 5,
-    "completed_on": "Mon, 08 Jan 2018, 14:44",
+    "completed_on": "Tue, 09 Jan 2018, 19:07",
     "title": "Prime permutations"
   },
   {
     "id": 50,
     "solved_by": 50218,
     "difficulty": 5,
-    "completed_on": "Mon, 08 Jan 2018, 18:02",
+    "completed_on": "Tue, 09 Jan 2018, 19:07",
     "title": "Consecutive prime sum"
   },
   {
@@ -360,56 +360,56 @@
     "id": 52,
     "solved_by": 53230,
     "difficulty": 5,
-    "completed_on": "Tue, 30 Jan 2018, 10:40",
+    "completed_on": "Tue, 30 Jan 2018, 18:56",
     "title": "Permuted multiples"
   },
   {
     "id": 53,
     "solved_by": 47962,
     "difficulty": 5,
-    "completed_on": "Tue, 30 Jan 2018, 11:08",
+    "completed_on": "Tue, 30 Jan 2018, 18:56",
     "title": "Combinatoric selections"
   },
   {
     "id": 54,
     "solved_by": 28292,
     "difficulty": 10,
-    "completed_on": "Wed, 24 Jan 2018, 10:01",
+    "completed_on": "Mon, 22 Jan 2018, 20:53",
     "title": "Poker hands"
   },
   {
     "id": 55,
     "solved_by": 43666,
     "difficulty": 5,
-    "completed_on": "Tue, 30 Jan 2018, 10:53",
+    "completed_on": "Tue, 30 Jan 2018, 18:56",
     "title": "Lychrel numbers"
   },
   {
     "id": 56,
     "solved_by": 47330,
     "difficulty": 5,
-    "completed_on": "Tue, 30 Jan 2018, 13:08",
+    "completed_on": "Tue, 30 Jan 2018, 18:56",
     "title": "Powerful digit sum"
   },
   {
     "id": 57,
     "solved_by": 33206,
     "difficulty": 5,
-    "completed_on": "Tue, 30 Jan 2018, 15:48",
+    "completed_on": "Tue, 30 Jan 2018, 18:56",
     "title": "Square root convergents"
   },
   {
     "id": 58,
     "solved_by": 32170,
     "difficulty": 5,
-    "completed_on": "Tue, 30 Jan 2018, 16:11",
+    "completed_on": "Tue, 30 Jan 2018, 18:56",
     "title": "Spiral primes"
   },
   {
     "id": 59,
     "solved_by": 33729,
     "difficulty": 5,
-    "completed_on": "Wed, 24 Jan 2018, 13:41",
+    "completed_on": "Wed, 24 Jan 2018, 19:02",
     "title": "XOR decryption"
   },
   {
@@ -430,14 +430,14 @@
     "id": 62,
     "solved_by": 24775,
     "difficulty": 15,
-    "completed_on": "Tue, 30 Jan 2018, 10:05",
+    "completed_on": "Mon, 29 Jan 2018, 21:36",
     "title": "Cubic permutations"
   },
   {
     "id": 63,
     "solved_by": 34712,
     "difficulty": 5,
-    "completed_on": "Tue, 30 Jan 2018, 13:48",
+    "completed_on": "Tue, 30 Jan 2018, 18:56",
     "title": "Powerful digit counts"
   },
   {
@@ -465,7 +465,7 @@
     "id": 67,
     "solved_by": 79598,
     "difficulty": 5,
-    "completed_on": "Tue, 30 Jan 2018, 13:16",
+    "completed_on": "Tue, 30 Jan 2018, 18:56",
     "title": "Maximum path sum II"
   },
   {
@@ -479,7 +479,7 @@
     "id": 69,
     "solved_by": 27330,
     "difficulty": 10,
-    "completed_on": "Wed, 24 Jan 2018, 18:26",
+    "completed_on": "Wed, 24 Jan 2018, 19:01",
     "title": "Totient maximum"
   },
   {
@@ -493,7 +493,7 @@
     "id": 71,
     "solved_by": 23173,
     "difficulty": 10,
-    "completed_on": "Thu, 25 Jan 2018, 10:10",
+    "completed_on": "Wed, 24 Jan 2018, 21:32",
     "title": "Ordered fractions"
   },
   {
@@ -528,7 +528,7 @@
     "id": 76,
     "solved_by": 22891,
     "difficulty": 10,
-    "completed_on": "Fri, 26 Jan 2018, 16:51",
+    "completed_on": "Fri, 26 Jan 2018, 20:41",
     "title": "Counting summations"
   },
   {
@@ -549,7 +549,7 @@
     "id": 79,
     "solved_by": 34618,
     "difficulty": 5,
-    "completed_on": "Tue, 30 Jan 2018, 17:04",
+    "completed_on": "Tue, 30 Jan 2018, 18:56",
     "title": "Passcode derivation"
   },
   {
@@ -563,21 +563,21 @@
     "id": 81,
     "solved_by": 27931,
     "difficulty": 10,
-    "completed_on": "Thu, 25 Jan 2018, 13:02",
+    "completed_on": "Thu, 25 Jan 2018, 20:57",
     "title": "Path sum: two ways"
   },
   {
     "id": 82,
     "solved_by": 16939,
     "difficulty": 20,
-    "completed_on": "Thu, 25 Jan 2018, 13:40",
+    "completed_on": "Thu, 25 Jan 2018, 20:57",
     "title": "Path sum: three ways"
   },
   {
     "id": 83,
     "solved_by": 14499,
     "difficulty": 25,
-    "completed_on": "Mon, 29 Jan 2018, 10:51",
+    "completed_on": "Sun, 28 Jan 2018, 20:58",
     "title": "Path sum: four ways"
   },
   {
@@ -640,7 +640,7 @@
     "id": 92,
     "solved_by": 34108,
     "difficulty": 5,
-    "completed_on": "Tue, 30 Jan 2018, 17:39",
+    "completed_on": "Tue, 30 Jan 2018, 18:56",
     "title": "Square digit chains"
   },
   {
@@ -675,7 +675,7 @@
     "id": 97,
     "solved_by": 36414,
     "difficulty": 5,
-    "completed_on": "Tue, 30 Jan 2018, 17:57",
+    "completed_on": "Tue, 30 Jan 2018, 18:56",
     "title": "Large non-Mersenne prime"
   },
   {
@@ -689,7 +689,7 @@
     "id": 99,
     "solved_by": 24685,
     "difficulty": 10,
-    "completed_on": "Wed, 07 Feb 2018, 17:06",
+    "completed_on": "Wed, 07 Feb 2018, 23:35",
     "title": "Largest exponential"
   },
   {
@@ -1438,7 +1438,7 @@
     "id": 206,
     "solved_by": 19156,
     "difficulty": 5,
-    "completed_on": "Tue, 30 Jan 2018, 18:30",
+    "completed_on": "Tue, 30 Jan 2018, 18:56",
     "title": "Concealed Square"
   },
   {

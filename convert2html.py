@@ -20,7 +20,7 @@ class Converter(object):
         self.html_exporter.template_path = [os.path.join('docs', 'templates')]
         self.html_exporter.template_file = 'full'
 
-    def convert(self, ipynb_path):   
+    def convert(self, ipynb_path):
         return self.html_exporter.from_filename(ipynb_path)
 
     def write(self, source_ipynb_path):
@@ -40,11 +40,11 @@ class Converter(object):
 def convert(is_all):
     solved_problems = dict()
     for dirpath, dirnames, filenames in os.walk('.'):
-        if re.match(r'^\.\\(\d+)-(\d+)$', dirpath):
-            for filename in filenames:
+        if re.search(r'(\d+)-(\d+)$', dirpath):
+            for filename in filter(lambda f: f.endswith('.ipynb'), filenames):
                 source_ipynb_path = os.path.join(dirpath, filename)
                 problem_id = int(re.search(r'p(\d+)', filename).group(1))
-                modified_datetime = datetime.fromtimestamp(os.path.getmtime(source_ipynb_path)).strftime('%a, %d %b %Y, %H:%M')
+                modified_datetime = os.path.getmtime(source_ipynb_path)
                 solved_problems[problem_id] = {
                     'modified_on': modified_datetime,
                     'source_ipynb_path': source_ipynb_path
@@ -52,7 +52,7 @@ def convert(is_all):
 
     latest_solved_problems = sorted(solved_problems.keys(), key=lambda k: solved_problems[k]['modified_on'], reverse=True)
     converter = Converter()
-    for problem_id in latest_solved_problems[:3]:
+    for problem_id in latest_solved_problems[:len(latest_solved_problems) if is_all else 3]:
         converter.write(solved_problems[problem_id]['source_ipynb_path'])
 
     return solved_problems
@@ -60,10 +60,12 @@ def convert(is_all):
 def change_problem_json(solved_problems):
     with open(PROBLEM_JSON, 'rt', encoding='utf-8') as f:
         problems = json.load(f)
+
+    strftime = lambda timestamp: datetime.fromtimestamp(timestamp).strftime('%a, %d %b %Y, %H:%M')
     
     for p in problems:
         if p['id'] in solved_problems:
-            p['completed_on'] = solved_problems[p['id']]['modified_on']
+            p['completed_on'] = strftime(solved_problems[p['id']]['modified_on'])
         else:
             p['completed_on'] = None
     
