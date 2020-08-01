@@ -9,7 +9,6 @@ from bs4 import BeautifulSoup
 import html
 import re
 import os
-from convert2html import convert_and_render
 
 template = {
     "nbformat": 4,
