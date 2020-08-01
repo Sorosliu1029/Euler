@@ -111,8 +111,4 @@ def main():
     converter.write('./1-25/p1.ipynb')
 
 if __name__ == '__main__':
-    # main()
-    # with open(PROBLEM_JSON, 'rt', encoding='utf-8') as f:
-    #     problems = json.load(f)
-    # render_index(problems=problems)
     convert_and_render()

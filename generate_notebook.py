@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python
 """
 generate jupyter notebook for Project Euler
 """
@@ -121,9 +121,6 @@ def main():
     with open(os.path.join(directory, 'p{}.ipynb'.format(problem_id)), 'w+') as f:
         json.dump(template, f, indent=2)
     print('generate done.')
-
-    convert_and_render()
-
 
 if __name__ == "__main__":
     main()
