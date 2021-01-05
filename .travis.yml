@@ -1,5 +1,0 @@
-language: python
-python:
-  - "3.6"
-script:
-  - python .travis/purge_camo_cached_profile.py
