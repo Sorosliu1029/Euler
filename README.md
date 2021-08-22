@@ -1,7 +1,7 @@
 <h1 align="center">Euler</h1>
 
 <p align="center">
-  <img src="https://projecteuler.net/images/euler_portrait.png" alt="euler" />
+  <img src="https://projecteuler.net/images/clipart/euler_portrait.png" alt="euler" />
 </p>
 
 ---
